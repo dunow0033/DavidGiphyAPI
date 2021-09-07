@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GIPHYAPI</string>
+    <string name="first_fragment">First fragment</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="gifs">Gifs</string>
+    <string name="search_for_gifs">Search for Gifs</string>
+</resources>
