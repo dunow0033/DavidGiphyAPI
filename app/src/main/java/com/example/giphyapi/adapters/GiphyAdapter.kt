@@ -23,7 +23,6 @@ class GiphyAdapter() : RecyclerView.Adapter<GiphyAdapter.GiphyViewHolder>() {
 
         override fun areContentsTheSame(oldItem: Data, newItem: Data): Boolean {
             return oldItem == newItem
-
         }
     }
 

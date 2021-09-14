@@ -3,6 +3,7 @@ package com.example.giphyapi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -16,27 +17,31 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-     private lateinit var viewModel: GiphyViewModel
-
+    private lateinit var viewModel: GiphyViewModel
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this,GiphyViewModelFactory(GiphyRepository(GiphyManager()))).
-        get(GiphyViewModel::class.java)
+        viewModel =
+            ViewModelProvider(this, GiphyViewModelFactory(GiphyRepository(GiphyManager()))).get(
+                GiphyViewModel::class.java
+            )
 
 
         val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.firstFragment, R.id.secondFragment,R.id.thirdFragment
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        navController = findNavController(R.id.nav_host_fragment)
+
+        setupActionBarWithNavController(navController)
         navView.setupWithNavController(navController)
 
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+
 }
