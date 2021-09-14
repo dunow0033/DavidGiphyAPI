@@ -1,4 +1,4 @@
-package com.example.giphyapi
+package com.example.giphyapi.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -30,8 +30,5 @@ object RetrofitInstance {
             .addConverterFactory(MoshiConverterFactory.create(Moshi.Builder().build()))
                 .client(providesOkHttpClient())
                 .build()
-
     }
-
-
 }

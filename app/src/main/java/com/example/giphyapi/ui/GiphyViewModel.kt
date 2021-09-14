@@ -21,9 +21,7 @@ class GiphyViewModel(val repo: GiphyRepository) : ViewModel() {
     val searchNewsData: LiveData<Resource<GiphyResponse>> get() = _searchNewsData
 
     init {
-
         getGiphy()
-
     }
 
 
@@ -44,15 +42,4 @@ class GiphyViewModel(val repo: GiphyRepository) : ViewModel() {
             _searchNewsData.postValue((response))
         }
 
-/*
-    private fun handleSearchResponse(response: Response<GiphyResponse>): Resource<GiphyResponse> {
-        if (response.isSuccessful) {
-            response.body()?.let { resultResponse ->
-                return Resource.Success(resultResponse)
-            }
-        }
-        return Resource.Error(response.message())
-    }
-
-*/
 }

@@ -1,18 +1,16 @@
-package com.example.giphyapi
+package com.example.giphyapi.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.giphyapi.R
 import com.example.giphyapi.Repository.GiphyRepository
 import com.example.giphyapi.data.remote.GiphyManager
 import com.example.giphyapi.databinding.ActivityMainBinding
-import com.example.giphyapi.ui.GiphyViewModel
-import com.example.giphyapi.ui.GiphyViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

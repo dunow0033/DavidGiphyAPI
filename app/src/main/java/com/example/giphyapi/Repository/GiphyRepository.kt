@@ -26,7 +26,6 @@ class GiphyRepository(private val giphyManager: GiphyManager) {
             }
 
         emit(resource)
-
     }
 
     suspend fun searchGiphy(search: String, limit: String, APIKEY: String) : Resource<GiphyResponse> {

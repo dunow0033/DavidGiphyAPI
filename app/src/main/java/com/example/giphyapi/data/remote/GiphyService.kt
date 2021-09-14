@@ -15,6 +15,7 @@ interface GiphyService {
     ): Response<GiphyResponse>
 
 
+
     @GET("v1/gifs/search")
     suspend fun searchGiphy(
         @Query("q") search: String,

@@ -5,7 +5,6 @@ import com.example.giphyapi.utils.Constants.Companion.API_KEY
 class GiphyManager {
 
     private val giphyService: GiphyService
-
     private val retrofit = RetrofitInstance.providesRetrofit()
 
 
